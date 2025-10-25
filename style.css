@@ -1,0 +1,77 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Стили игрового поля (сетка) */
+.game-board {
+    display: grid;
+    /* Создаем сетку 3x3 с одинаковой шириной столбцов и строк */
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+    width: 310px; /* 3*100px + 2*5px = 310px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: #ccc;
+}
+
+/* Стили отдельных клеток */
+.cell {
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.cell:hover {
+    background-color: #ddd;
+}
+
+/* Стиль для кнопки сброса */
+.reset-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+.reset-button:hover {
+    background-color: #0056b3;
+}
+
+/* Стиль для статуса игры */
+.status {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #555;
+}
