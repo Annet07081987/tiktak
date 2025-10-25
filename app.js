@@ -50,41 +50,61 @@ function checkWin() {
   if (gameField[0] !== "" && gameField[0] === gameField[1] && gameField[0] === gameField[2]) {
     screen.textContent = "Winner is:" + currentPlayer
     stopGame = true;
+   confetti({
+  particleCount: 1000, // Number of confetti pieces
+  spread: 120, // How wide the confetti spreads
+  origin: { y: 0.6 } // Where the confetti originates on the y-axis
+});
+
   }
 
   if (gameField[3] !== "" && gameField[3] === gameField[4] && gameField[4] === gameField[5]) {
     screen.textContent = "Winner is:" + currentPlayer
     stopGame = true;
+    confetti();
+
   }
 
   if (gameField[6] !== "" && gameField[6] === gameField[7] && gameField[7] === gameField[8]) {
     screen.textContent = "Winner is:" + currentPlayer
     stopGame = true;
+    confetti();
+
   }
 
   if (gameField[0] !== "" && gameField[0] === gameField[3] && gameField[3] === gameField[6]) {
     screen.textContent = "Winner is:" + currentPlayer
     stopGame = true;
+    confetti();
+
   }
 
   if (gameField[1] !== "" && gameField[1] === gameField[4] && gameField[4] === gameField[7]) {
     screen.textContent = "Winner is:" + currentPlayer
     stopGame = true;
+    confetti();
+
   }
 
   if (gameField[2] !== "" && gameField[2] === gameField[5] && gameField[5] === gameField[8]) {
     screen.textContent = "Winner is:" + currentPlayer
     stopGame = true;
+    confetti();
+
   }
 
   if (gameField[0] !== "" && gameField[0] === gameField[4] && gameField[4] === gameField[8]) {
     screen.textContent = "Winner is:" + currentPlayer
     stopGame = true;
+    confetti();
+
   }
 
   if (gameField[2] !== "" && gameField[2] === gameField[4] && gameField[4] === gameField[6]) {
     screen.textContent = "Winner is:" + currentPlayer
     stopGame = true;
+    confetti();
+
   }
 }
 
@@ -95,7 +115,7 @@ function startNewgame(event) {
   gameField = ["", "", "", "", "", "", "", "", ""]
   stopGame = false
   currentPlayer = "X"
-  
+
   for (const element of findCells) {
     element.textContent = ""
   }
